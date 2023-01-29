@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-//import Moment from "react-moment";
 
 const Lyric = () => {
   const [track, setTrack] = useState<any>([]);
