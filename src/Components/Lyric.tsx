@@ -10,14 +10,14 @@ const Lyric = () => {
   useEffect(() => {
     axios
       .get(
-        `https://proxy.cors.sh/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+        `http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then((res) => {
         let lyrics = res.data.message.body.lyrics;
         setLyrics({ lyrics });
 
         return axios.get(
-          `https://proxy.cors.sh/http://api.musixmatch.com/ws/1.1/track.get?track_id=${params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+          `http://api.musixmatch.com/ws/1.1/track.get?track_id=${params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
         );
       })
       .then((res) => {
