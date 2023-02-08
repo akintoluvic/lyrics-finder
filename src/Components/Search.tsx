@@ -4,7 +4,7 @@ import { Context } from "./Context";
 
 const Search = () => {
   const ctxt = useContext(Context);
-  const [state, setState]: {} | any = ctxt;
+  const [, setState]: {} | any = ctxt;
   const [userInput, setUserInput] = useState("");
   const [trackTitle, setTrackTitle] = useState("");
   useEffect(() => {
